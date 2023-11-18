@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React-1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+
+  <!--  Using JavaScript :
+    <script>
+        const a = document.createElement("h1");
+
+        a.innerHTML = "Hello World!";
+
+        const b = document.getElementById("container");
+
+        b.append(a);
+
+    </script>
+   -->
+
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+
+  <script>
+    const a = React.createElement("h1", { id: "heading-1" }, "Hello World!");
+
+    const b = React.createElement("h2", { id: "heading-2" }, "Hello World!");
+
+    const c = React.createElement("h3", { id: "heading-3" }, "Hello World!");
+
+    const d = React.createElement("div", { id: "container" }, [a, b, c]);
+
+    const x = ReactDOM.createRoot(document.getElementById("root"));
+
+    x.render(d);
+  </script>
+</html>
